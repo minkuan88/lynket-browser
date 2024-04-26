@@ -28,11 +28,11 @@ import org.gradle.kotlin.dsl.getByType
 
 internal val Project.catalogs get() = extensions.getByType<VersionCatalogsExtension>()
 
-internal val Project.deps: VersionCatalog get() = catalogs.named("deps")
+internal val Project.deps: VersionCatalog get() = catalogs.named("libs")
 
 internal fun VersionCatalog.version(reference: String): String? = findVersion(reference)
   .orElse(null)
   ?.toString()
 
-internal fun VersionCatalog.dependency(reference: String): String? = findDependency(reference)
+internal fun VersionCatalog.dependency(reference: String): String? = findLibrary(reference)
   .orElse(null)?.toString()

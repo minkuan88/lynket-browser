@@ -1,5 +1,5 @@
 [versions]
-agp = "8.3.0-alpha18"
+agp = "8.3.2"
 kotlin = "1.9.0"
 coreKtx = "1.12.0"
 junit = "4.13.2"
@@ -8,11 +8,24 @@ espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.6.2"
 activityCompose = "1.8.2"
 composeBom = "2023.10.01"
+compose = "1.5.2"
 whetstone = "0.6.0"
 dagger = "2.50"
 molecule = "1.3.1"
+spotless = "6.8.0"
+dokka = "1.5.0"
+gradle-dependency-updates = "0.41.0"
+nexus-publish = "1.1.0"
+scabbard = "0.5.0"
 
 [libraries]
+agp = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+spotless = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
+dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
+gradle-dependency-updates = { module = "com.github.ben-manes:gradle-versions-plugin", version.ref = "gradle-dependency-updates" }
+nexus-publish = { module = "io.github.gradle-nexus:publish-plugin", version.ref = "nexus-publish" }
+
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -36,3 +49,4 @@ androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 whetstone = { id = "com.deliveryhero.whetstone", version.ref = "whetstone" }
+scabbard = { id = "scabbard.gradle", version.ref = "scabbard" }

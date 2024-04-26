@@ -66,3 +66,12 @@ dependencies {
   implementation("gradle.plugin.dev.arunkumar:scabbard-gradle-plugin:0.5.0")
 }
 */
+
+dependencies {
+  implementation(libs.agp)
+  implementation(libs.kotlin)
+  implementation(libs.spotless)
+  implementation(libs.dokka)
+  implementation(libs.gradle.dependency.updates)
+  implementation(libs.nexus.publish)
+}
